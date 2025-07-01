@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alimentación y suplementos recomendados | Primer Trimestre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-bebe: #f291b3;
+            --celeste-bebe: #225ece;
+            --blanco-crema: #FFFBFB;
+            --rosa-hover: #FC68A0;
+            --gris-oscuro-texto: #385c6e;
+        }
+       body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f7;
+            color: #333;
+            margin: 0;
+            padding: 0; 
+        }
+        header {
+            background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+            color: white;
+            padding: 28px 18px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px #92b1eb;
+        }
+        header h1 {
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        header p { 
+            font-size: 1.04rem;
+            font-weight: 600;
+            opacity: 0.92;
+            margin: 0;
+            font-style: italic;
+            letter-spacing: .2px;
+        }
+        main {
+            max-width: 1050px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        }
+       
+        .section-container { 
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 28px;
+            margin-bottom: 35px;
+        }
+        .section-content {
+            flex: 2 1 380px;
+            padding: 18px 24px 18px 24px;
+            border-left: 6px solid #c2185b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px #c2185b18;   
+            flex: 2 1 600px;
+    max-width: 750px;
+         
+        }
+        .section-container.img-left {
+            flex-direction: row;
+        }
+        .section-image {
+            flex: 1 1 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            margin: 0 auto;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .section-image img {
+            width: 60%; 
+            width: 220px;
+            height: 140px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-top: 0;
+            margin-bottom: 6px;
+            box-shadow: 0 4px 15px #b416557e; 
+            border: 2px solid #f8cadd;
+            transition: transform 0.22s ease;
+            background: #fff;
+        }
+        .section-image img:hover {
+            transform: scale(1.06);
+        }
+        .section-image .image-caption {
+            text-align: center;
+            font-size: 0.91em;
+            color: #7d3ba3;
+            margin-top: 7px;
+            font-style: italic;
+        } 
+         h2 { 
+           color: #c2185b;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-content ul, .section-content ol {
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .section-content li, .section-content p {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            max-width: 130ch;
+    padding-right: 12px;
+        }
+        .section-content ul li:last-child,
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+       h3 {
+            color: #225ece;
+            font-size: 1.3rem;
+            padding-bottom: 8px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-bottom: 3px solid #FF7F50;
+        }
+        .highlight-info {
+            background: #fae7fd;
+            border-left: 6px solid #c2185b;
+            color: #385c6e;
+            font-size: 1.00em;
+            border-radius: 18px;
+            padding: 18px 24px;
+            margin-bottom: 18px;
+            margin-top: 8px;
+            box-shadow: 0 4px 18px #c2185b18;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .highlight-info-title {
+            color: #c2185b;
+            font-size: 1.2rem;
+            padding-bottom: 6px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 2px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .highlight-info-text {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+        }
+        .highlight-info-text:last-child {
+            margin-bottom: 0;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 32px;
+        }
+        .cta-button {
+            padding: 12px 73px;
+            align-self: center;
+            width: auto;
+            min-width: 0;
+            background:#d5dffc;
+            color: #0c3277; 
+            border: none;
+            border-radius: 22px;
+            font-size: 1.06em;
+            font-weight: 720;
+            cursor: pointer;
+            transition: all 0.28s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.21);
+            transform: skewX(-20deg);
+            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            transform: translateY(-2.5px) scale(1.03);
+            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+        }
+        .cta-button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+        }
+         .mini-section {
+            background: #fff;
+            border-left: 6px solid #225ece;
+            color: #385c6e;
+            font-size: 1.00em;
+            border-radius: 18px;
+            padding: 18px 24px;
+            margin-bottom: 18px;
+            margin-top: 8px;
+            box-shadow: 0 4px 18px #225ece18;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .mini-section h3 {
+            color: #225ece;
+            font-size: 1.3rem;
+            padding-bottom: 8px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-bottom: 3px solid #FF7F50;
+        }
+        .mini-section ul, .mini-section ol {
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .mini-section li, .mini-section p {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+             padding-right: 12px;
+        }
+        .mini-section ul li:last-child,
+        .mini-section p:last-child {
+            margin-bottom: 0;
+        }
+        @media (max-width: 950px) {
+            main { max-width: 99vw; }
+            .section-container, .section-container.img-left { flex-direction: column !important; gap: 0;}
+            .section-content, .section-image { border-radius: 15px; }
+            .section-content { padding: 14px 6vw 14px 6vw; }
+            .section-image { max-width: 99vw; min-width: 0; padding-bottom: 0; }
+            .section-image img { margin-top: 12px; }
+        }
+       @media (max-width: 700px) {
+            h2 { font-size: 1.08rem; }
+            .section-content, .mini-section { padding: 9px 4vw; }
+            .section-image img { width: 95%; min-width: 95px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Alimentación y suplementos</h1>
+    <p>Primer Trimestre – Embarazo</p>
+</header>
+<main>
+    <!-- Intro -->
+    <div class="section-container">
+        <div class="section-image">
+            <img src="../img/img07.png">
+        </div>
+        <section class="section-content">
+            <ul><li>
+                El primer trimestre es una etapa clave para el desarrollo del bebé. Aunque aún no se note por fuera, dentro del cuerpo ya se están formando los órganos, el sistema nervioso y la placenta. Por eso, la alimentación debe ser equilibrada, segura y adaptada a los cambios que se viven en estas semanas.
+            </li></ul>
+        </section>
+    </div>
+   <!-- Alimentación recomendada -->
+<div class="mini-section">
+    <h3>✅ 1. Alimentación recomendada</h3>
+    <ul>
+        <li><b>Frutas y verduras frescas</b><br> Son fuente de vitaminas y fibra. Las de color verde oscuro, como la espinaca o el brócoli, ayudan a prevenir malformaciones en el bebé.</li>
+        
+        <li><b>Cereales y tubérculos</b><br> Avena, arroz integral, papa o camote dan energía y mejoran la digestión.</li>
+        
+        <li><b>Proteínas bien cocidas</b><br> El pollo, los huevos, las menestras y los pescados cocidos ayudan a formar los órganos y tejidos del bebé.</li>
+        
+        <li><b>Lácteos pasteurizados</b><br> Leche, yogur y queso fresco aportan calcio, necesario para fortalecer los huesos y dientes del bebé y de la mamá.</li>
+        
+        <li><b>Grasas saludables</b><br> La palta, el aceite de oliva y las semillas como la chía apoyan el desarrollo del cerebro y del sistema nervioso del bebé.</li>
+    </ul>
+</div>
+
+
+<!-- Alimentos a evitar -->
+<div class="section-container img-left">
+    <div class="section-image">
+        <img src="../img/img08.png" alt="Alimentos a evitar">
+    </div>
+    <section class="section-content">
+        <h2>🚫 2. Alimentos a evitar</h2>
+        <ul>
+            <li><b>Carne, huevo o pescado crudo o poco cocido</b><br>
+            Pueden contener bacterias o parásitos, que pueden provocar infecciones o abortos.</li>    
+            <li><b>Alcohol</b><br>
+            Afecta directamente el desarrollo del bebé, especialmente del cerebro y los órganos</li>          
+            <li><b>Comida chatarra o muy azucarada.</b><br>
+            No aporta nutrientes y puede provocar aumento de peso o problemas en la salud.</li>         
+            <li><b>Demasiada cafeína.</b><br>
+            Exceder el consumo puede afectar el ritmo cardíaco del bebé.</li>
+        </ul>
+    </section>
+</div>
+
+<!-- Suplementos necesarios -->
+<div class="section-container">
+    <div class="section-image">
+        <img src="../img/img09.png">
+    </div>
+    <section class="section-content">
+        <h2>💊 3. Suplementos necesarios</h2>
+        <ul>
+            <li><b>Ácido fólico (vitamina B9):</b> Previene malformaciones del cerebro y columna del bebé. Dosis común: 400 microgramos diarios (5 mg si hay antecedentes de riesgo).</li>
+            
+            <li><b>Yodo:</b> Ayuda al desarrollo del cerebro y las hormonas del bebé. Dosis recomendada: 200 microgramos diarios si no consumes sal yodada o lácteos.</li>
+            
+            <li><b>Hierro:</b> Necesario solo si tienes anemia o estás en riesgo. Previene partos prematuros y bajo peso del bebé. Se absorbe mejor con alimentos ricos en vitamina C (como jugo de naranja).</li>
+        </ul>
+    </section>
+</div>
+
+
+    <!-- Recomendaciones generales -->
+    <div class="mini-section">     
+            <h3>📌 4. Recomendaciones generales</h3>
+            <ul>
+                <li>Evita tomar medicamentos por tu cuenta, solo toma lo que indique el médico.</li>
+                <li>Lava bien frutas y verduras antes de consumirlas, incluso si están peladas.</li>
+                <li>Evita ayunos prolongados, sobre todo si tienes náuseas. Come algo liviano al despertar.</li>
+                <li>Descansa lo necesario, dormir bien ayuda a tu cuerpo a adaptarse a los cambios del embarazo.</li>
+            </ul>
+    </div>
+    <div class="button-container">
+        <a href="../principal.html" class="cta-button">⬅️ Volver</a>
+    </div>
+</main>
+</body>
+</html>

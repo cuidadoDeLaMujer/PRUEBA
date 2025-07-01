@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Complicaciones frecuentes | Primer Trimestre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-bebe: #f291b3;
+            --celeste-bebe: #225ece;
+            --blanco-crema: #FFFBFB;
+            --rosa-hover: #FC68A0;
+            --gris-oscuro-texto: #385c6e;
+        }
+         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f7;
+            color: #333;
+            margin: 0;
+            padding: 0; 
+        }
+        header {
+            background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+            color: white;
+            padding: 28px 18px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px #92b1eb;
+        }
+        header h1 {
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        header p { 
+            font-size: 1.04rem;
+            font-weight: 600;
+            opacity: 0.92;
+            margin: 0;
+            font-style: italic;
+            letter-spacing: .2px;
+        }
+        main {
+            max-width: 1050px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        
+        }
+        .intro-complicacion {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            background: #fff;
+            border-radius: 18px;
+            padding: 18px 24px 18px 24px;
+            box-shadow: 0 4px 18px #c2185b18;
+            border-left: 6px solid #c2185b;
+
+            color: #385c6e;
+            font-size: 1.00em;
+            margin-bottom: 35px; 
+        }
+        .intro-complicacion div {
+            flex: 1 1 60%;
+        }
+        .intro-complicacion img {
+            flex: 0 0 18%;
+            max-width: none;
+            height: 115px;
+            width: 130px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #b416557e; 
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            background: #fff;
+            border: 2px solid #f8cadd;
+            margin-top: -20px;
+        }
+        .intro-complicacion img:hover {
+            transform: scale(1.05);
+        }
+        .intro-complicacion p {
+            font-size: 1.00em;
+            color:  #385c6e;
+            text-align: justify;
+            
+            margin-bottom: 3px; 
+        }
+        .intro-complicacion h2 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        section.section { 
+            background: #fff;
+            border-radius: 18px;
+            padding: 18px 24px 18px 24px;
+            box-shadow: 0 4px 18px #c2185b18;
+            margin-bottom: 35px;
+            border-left: 6px solid #c2185b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        section.section ul,
+        section.section ol {
+            padding-left: 22px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        section.section li,
+        section.section p {
+            font-size: 1.00em;
+            line-height: 1.6;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            max-width: 110ch;
+        }
+        section.section ul li:last-child,
+        section.section p:last-child {
+            margin-bottom: 0;
+        }
+        section.section ul li:last-child,
+        section.section p:last-child {
+            margin-bottom: 0;
+        }
+        section.section h2 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-top: 1;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        section.section h4 {
+            color: #c2185b;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            margin-top: 6px;
+            padding-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        } 
+        .highlight {
+            background-color: #e7e9fd;
+            color:#2b3850; 
+            font-weight: 600;
+            border-left: 6px solid #225ece;
+            padding: 18px 20px 18px 22px;
+            margin-top: 20px;
+            border-radius: 12px;
+            font-size: 1.00rem;
+        }
+        .highlight-small {
+            background-color: #e7e9fd;
+            color:#2b3850; 
+            font-weight: 600;
+            border-left: 6px solid #225ece;
+            padding: 12px 16px 12px 18px;
+            margin-top: 12px;
+            border-radius: 10px;
+            font-size: 0.97rem;
+        }
+
+        .content-image {
+            display: block;
+            max-width: 50%;
+            height: auto;
+            margin: 25px auto;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px #b416557e; 
+            object-fit: cover;
+            margin-top: 8px;
+            transition: transform 0.3s ease;
+            border: 2px solid #f8cadd;
+        }
+        .content-image:hover {
+            transform: scale(1.05);
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta-button {
+            padding: 12px 73px;
+            align-self: center;
+            width: auto;
+            min-width: 0;
+            background:#d5dffc;
+            color: #0c3277; 
+            border: none;
+            border-radius: 22px;
+            font-size: 1.06em;
+            font-weight: 720;
+            cursor: pointer;
+            transition: all 0.28s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.21);
+            transform: skewX(-20deg);
+            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            transform: translateY(-2.5px) scale(1.03);
+            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+        }
+        .cta-button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+        }
+        @media (max-width: 900px) {
+            main { max-width: 99vw; }
+            .intro-complicacion { flex-direction: column; padding: 18px 5vw; }
+            .intro-complicacion img { width: 70%; height: auto; margin: 0 auto 16px auto; }
+            section.section { padding: 14px 6vw 14px 6vw; }
+            section.section h2 {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            .content-image { max-width: 95%; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Complicaciones en el primer trimestre</h1>
+    <p>Primer Trimestre – Embarazo</p>
+</header>
+<main>
+    <!-- INTRO -->
+     <section class="section">
+        <h2>⚠️ ¿Cuáles son las complicaciones más frecuentes?</h2>
+            <ul><li>
+                El primer trimestre es una etapa crucial para el desarrollo del embarazo. Aunque la mayoría de las gestaciones avanzan sin problemas graves, existen algunas complicaciones que pueden presentarse y requieren atención oportuna. Conocerlas permite actuar rápidamente y buscar ayuda profesional si es necesario.
+            </li></ul>
+     </section>
+
+    <!-- ABORTO ESPONTÁNEO Y AMENAZA DE ABORTO -->
+    <section class="section">
+        <h2>🚨 Aborto espontáneo</h2>
+        <div style="display:flex;justify-content:center;">
+            <img src="../img/img13.png" class="content-image">
+        </div>
+        <h4>¿Qué es?</h4>
+        <ul><li>
+            Se trata de la pérdida del embarazo antes de la semana 12-13. Puede ocurrir de forma natural por alteraciones genéticas o problemas en el desarrollo embrionario.
+       </li> </ul>
+        <h4>¿Cómo se manifiesta?</h4>
+        <ul>
+            <li>Sangrado vaginal (puede ser leve o abundante, rojo brillante o marrón).</li>
+            <li>Dolor abdominal tipo cólico, parecido al de la menstruación.</li>
+            <li>A veces, salida de coágulos o tejido.</li>
+        </ul>
+        <h4>¿Qué hacer?</h4>
+        <ul>
+            <li>Acude de inmediato al centro de salud si presentas sangrado, dolor fuerte o expulsión de tejido.</li>
+            <li>No automediques ni introduzcas nada en la vagina.</li>
+        </ul>
+        <div class="highlight-small">
+            Recuerda: La mayoría de abortos espontáneos no pueden evitarse y no son culpa de la madre.
+        </div>
+    </section>
+
+    <!-- EMBARAZO ECTÓPICO -->
+    <section class="section">
+        <h2>⚠️ Embarazo ectópico</h2>
+        <div style="display:flex;justify-content:center;">
+            <img src="../img/img14.png" class="content-image">
+        </div>
+        <h4>¿Qué es?</h4>
+        <ul><li>
+            Es cuando el embarazo se implanta fuera del útero, generalmente en una trompa de Falopio. No puede evolucionar normalmente y puede poner en peligro la vida si no se detecta a tiempo.
+        </li> </ul>
+        <h4>¿Cómo se manifiesta?</h4>
+        <ul>
+            <li>Sangrado vaginal leve o manchas.</li>
+            <li>Dolor intenso en bajo vientre, a un lado del abdomen.</li>
+            <li>Mareos, sudor frío o desmayo (en casos graves, por hemorragia interna).</li>
+        </ul>
+        <h4>¿Qué hacer?</h4>
+        <ul>
+            <li>Busca atención médica urgente si presentas estos síntomas.</li>
+            <li>No ignores el dolor intenso o persistente.</li>
+        </ul>
+        <div class="highlight-small">
+            El diagnóstico precoz puede salvar tu vida. Ante síntomas sospechosos, acude sin demora.
+        </div>
+    </section>
+
+    <!-- HIPERÉMESIS GRAVÍDICA -->
+    <section class="section">
+        <h2>🤢 Hiperémesis gravídica</h2>
+        <div style="display:flex;justify-content:center;">
+            <img src="../img/img15.png" class="content-image" >
+        </div>
+        <h4>¿Qué es?</h4>
+        <ul><li>
+            Se trata de náuseas y vómitos tan intensos que impiden alimentarse y pueden causar deshidratación o pérdida de peso.
+        </li> </ul>
+        <h4>¿Cómo se manifiesta?</h4>
+        <ul>
+            <li>Náuseas y vómitos persistentes, especialmente en la mañana pero pueden ocurrir a cualquier hora.</li>
+            <li>Pérdida de peso o incapacidad de retener líquidos y alimentos.</li>
+            <li>Mareos, debilidad y signos de deshidratación.</li>
+        </ul>
+        <h4>¿Qué hacer?</h4>
+        <ul>
+            <li>Si no puedes retener líquidos ni alimentos, o presentas mareos y debilidad, consulta de inmediato.</li>
+            <li>El tratamiento médico puede requerir hidratación por vía intravenosa y control de síntomas.</li>
+        </ul>
+        <div class="highlight-small">
+            No todas las náuseas son graves, pero cuando afectan tu vida diaria, busca apoyo médico.
+        </div>
+    </section>
+
+    <!-- INFECCIONES DEL TRACTO URINARIO -->
+    <section class="section">
+        <h2>🦠 Infecciones del tracto urinario</h2>
+        <div style="display:flex;justify-content:center;">
+            <img src="../img/img16.png" class="content-image" alt="Infección urinaria embarazo">
+        </div>
+        <h4>¿Qué es?</h4>
+        <ul><li>
+            Son infecciones que afectan la vejiga o las vías urinarias. Durante el embarazo, las mujeres son más propensas debido a los cambios hormonales y físicos.
+        </li> </ul>
+        <h4>¿Cómo se manifiesta?</h4>
+        <ul>
+            <li>Ardor o dolor al orinar.</li>
+            <li>Orina turbia, con olor fuerte o incluso con sangre.</li>      
+            <li>Dolor en la parte baja del abdomen y necesidad de orinar con mayor frecuencia</li>
+        </ul>
+        <h4>¿Qué hacer?</h4>
+        <ul>
+            <li>Consulta rápidamente al médico ante cualquier síntoma, ya que las infecciones urinarias pueden complicarse durante el embarazo.</li>
+            <li>Bebe suficiente agua y mantén una adecuada higiene íntima.</li>
+        </ul>
+        <div class="highlight-small">
+            Si no se tratan a tiempo, pueden desencadenar complicaciones como infecciones más graves o parto prematuro.
+        </div>
+    </section>
+
+    <div class="button-container">
+        <a href="../principal.html" class="cta-button">⬅️ Volver</a>
+    </div>
+</main>
+</body>
+</html>

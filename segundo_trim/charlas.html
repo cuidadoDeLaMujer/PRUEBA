@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Charlas sobre parto, lactancia y preparación | Segundo Trimestre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-bebe: #f291b3;
+            --celeste-bebe: #225ece;
+            --blanco-crema: #FFFBFB;
+            --rosa-hover: #FC68A0;
+            --gris-oscuro-texto: #385c6e;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f7;
+            color: #333;
+            margin: 0;
+            padding: 0; 
+        }
+        header {
+            background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+            color: white;
+            padding: 28px 18px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px #92b1eb;
+        }
+        header h1 {
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        header p { 
+            font-size: 1.04rem;
+            font-weight: 600;
+            opacity: 0.92;
+            margin: 0;
+            font-style: italic;
+            letter-spacing: .2px;
+        }
+        main {
+            max-width: 1050px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        }
+        .charla-card {
+            background: #fff;
+            border-left: 6px solid #225ece;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px #c2185b18;
+            margin-bottom: 35px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+            transition: box-shadow 0.2s;
+            padding: 18px 24px 18px 24px;
+        }
+        .charla-card:hover {
+            box-shadow: 0 12px 32px #225ece2c;
+        }
+        .charla-title {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .charla-info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-bottom: 6px;
+            justify-content: center;
+        }
+        .charla-info-item {
+            background: #e7e9fd;
+            color: #385c6e;
+            border-radius: 10px;
+            padding: 9px 18px 9px 15px;
+            font-size: 1.00em;
+            font-weight: 600;
+            margin-bottom: 3px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            min-width: 145px;
+            justify-content: center;
+        }
+        .charla-link-row {
+            margin-top: 10px;
+        }
+        .charla-link {
+            background: #d5dffc;
+            color: #0c3277;
+            padding: 9px 19px;
+            border-radius: 18px;
+            font-size: 1.00em;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px #225ece1a;
+        }
+        .charla-link:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            box-shadow: 0 7px 22px rgba(255,127,80,0.18);
+        }
+        .charla-desc {
+            font-size: 1.00em;
+            color: #385c6e;
+            margin: 8px 0 0 0;
+            text-align: justify;
+            line-height: 1.4;
+        }
+        @media (max-width: 900px) {
+            main { max-width: 99vw; }
+            .charla-card { padding: 18px 10vw 18px 7vw; }
+        }
+        @media (max-width: 600px) {
+            .charla-card { padding: 13px 3vw 13px 3vw; }
+            .charla-title { font-size: 1.12rem; }
+            .charla-info-row { gap: 10px; }
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 32px;
+        }
+        .cta-button {
+            padding: 12px 73px;
+            align-self: center;
+            width: auto;
+            min-width: 0;
+            background:#d5dffc;
+            color: #0c3277;
+            border: none;
+            border-radius: 22px;
+            font-size: 1.06em;
+            font-weight: 720;
+            cursor: pointer;
+            transition: all 0.28s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.21);
+            transform: skewX(-20deg);
+            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            transform: translateY(-2.5px) scale(1.03);
+            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+        }
+        .cta-button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Charlas: Parto, lactancia y preparación</h1>
+    <p>Segundo Trimestre – Embarazo</p>
+</header>
+<main>
+    <div class="charla-card">
+        <div class="charla-title">👶 Charla: Etapas del parto y cuándo acudir</div>
+        <div class="charla-info-row">
+            <div class="charla-info-item"><b>Fecha:</b> 12/08/2025</div>
+            <div class="charla-info-item"><b>Hora:</b> 4:30 p.m.</div>
+            <div class="charla-info-item"><b>A cargo de:</b> Dra. Valeria Méndez</div>
+        </div>
+        <div class="charla-link-row">
+            <a class="charla-link" href="https://meet.google.com/cei-ovrn-trz" target="_blank" rel="noopener">
+                🔗 Unirse a la charla
+            </a>
+        </div>
+        <div class="charla-desc">
+           Aprende cómo identificar el inicio del parto, las etapas que lo componen y cuándo ir al hospital.
+        </div>
+    </div>
+
+    <div class="charla-card">
+        <div class="charla-title">🍼 Charla: Inicio de la lactancia y dificultades comunes</div>
+        <div class="charla-info-row">
+            <div class="charla-info-item"><b>Fecha:</b> 21/08/2025</div>
+            <div class="charla-info-item"><b>Hora:</b> 5:30 p.m.</div>
+            <div class="charla-info-item"><b>A cargo de:</b> Lic. Camila Torres</div>
+        </div>
+        <div class="charla-link-row">
+            <a class="charla-link" href="https://meet.google.com/cei-ovrn-trz" target="_blank" rel="noopener">
+                🔗 Unirse a la charla
+            </a>
+        </div>
+        <div class="charla-desc">
+            Conoce los beneficios de la lactancia, posiciones recomendadas y cómo superar dificultades comunes.
+        </div>
+    </div>
+
+    <div class="charla-card">
+        <div class="charla-title">💪 Charla: Bienestar y preparación emocional</div>
+        <div class="charla-info-row">
+            <div class="charla-info-item"><b>Fecha:</b> 28/08/2025</div>
+            <div class="charla-info-item"><b>Hora:</b> 7:00 p.m.</div>
+            <div class="charla-info-item"><b>A cargo de:</b> Psic. Daniela Suárez</div>
+        </div>
+        <div class="charla-link-row">
+            <a class="charla-link" href="https://meet.google.com/cei-ovrn-trz" target="_blank" rel="noopener">
+                🔗 Unirse a la charla
+            </a>
+        </div>
+        <div class="charla-desc">
+            Identifica los cambios emocionales del embarazo y aprende a cuidarte con apoyo y autocuidado.
+        </div>
+    </div>
+    <!-- Puedes agregar más charlas repitiendo el bloque .charla-card -->
+    <div class="button-container">
+        <a href="../principal.html" class="cta-button">⬅️ Volver</a>
+    </div>
+</main>
+</body>
+</html>

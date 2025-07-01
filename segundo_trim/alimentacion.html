@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alimentación en el Segundo Trimestre del Embarazo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-bebe: #f291b3;
+            --celeste-bebe: #225ece;
+            --blanco-crema: #FFFBFB;
+            --rosa-hover: #FC68A0;
+            --gris-oscuro-texto: #385c6e;
+        }
+       
+         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f7;
+            color: #333;
+            margin: 0;
+            padding: 0; 
+        }
+        header {
+            background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+            color: white;
+            padding: 28px 18px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px #92b1eb;
+        }
+        header h1 {
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        header p { 
+            font-size: 1.04rem;
+            font-weight: 600;
+            opacity: 0.92;
+            margin: 0;
+            font-style: italic;
+            letter-spacing: .2px;
+        }
+        main {
+            max-width: 1050px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        }
+       
+        .section-container { 
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 28px;
+            margin-bottom: 35px;
+        }
+        .section-content {
+            flex: 2 1 380px;
+            padding: 18px 24px 18px 24px;
+            border-left: 6px solid #c2185b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px #c2185b18;   
+            flex: 2 1 600px;
+            max-width: 750px;
+            
+        }
+        .section-container.img-left {
+            flex-direction: row;
+        }
+        .section-image {
+            flex: 1 1 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            margin: 0 auto;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .section-image img {
+            width: 220px;
+            height: 140px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-top: 0;
+            margin-bottom: 6px;
+            box-shadow: 0 4px 15px #b416557e; 
+            border: 2px solid #f8cadd;
+            transition: transform 0.22s ease;
+            background: #fff;
+        }
+        .section-image img:hover {
+            transform: scale(1.06);
+        }
+        h2 { 
+           color: #c2185b;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-content ul, .section-content ol {
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .section-content li, .section-content p {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            max-width: 130ch;
+            padding-right: 12px;
+        }
+        .section-content ul li:last-child,
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+        h3 {
+            color: #225ece;
+            font-size: 1.3rem;
+            padding-bottom: 8px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-bottom: 3px solid #FF7F50;
+        }
+        .mini-section {
+            background: #fff;
+            border-left: 6px solid #225ece;
+            color: #385c6e;
+            font-size: 1.00em;
+            border-radius: 18px;
+            padding: 18px 24px;
+            margin-top: 8px;
+            box-shadow: 0 4px 18px #225ece18;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+             margin-bottom: 35px;
+        }
+        .mini-section h3 {
+            color: #225ece;
+            font-size: 1.3rem;
+            padding-bottom: 8px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-bottom: 3px solid #FF7F50;
+        }
+          .button-container {
+            text-align: center;
+            margin-top: 32px;
+        }
+        .cta-button {
+            padding: 12px 73px;
+            align-self: center;
+            width: auto;
+            min-width: 0;
+            background:#d5dffc;
+            color: #0c3277; 
+            border: none;
+            border-radius: 22px;
+            font-size: 1.06em;
+            font-weight: 720;
+            cursor: pointer;
+            transition: all 0.28s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.21);
+            transform: skewX(-20deg);
+            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            transform: translateY(-2.5px) scale(1.03);
+            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+        }
+        .cta-button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+        }
+        .mini-section ul, .mini-section ol {
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .mini-section li, .mini-section p {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            padding-right: 12px;
+        }
+        .mini-section ul li:last-child,
+        .mini-section p:last-child {
+            margin-bottom: 0;
+        }
+        @media (max-width: 950px) {
+            main { max-width: 99vw; }
+            .section-container, .section-container.img-left { flex-direction: column !important; gap: 0;}
+            .section-content, .section-image { border-radius: 15px; }
+            .section-content { padding: 14px 6vw 14px 6vw; }
+            .section-image { max-width: 99vw; min-width: 0; padding-bottom: 0; }
+            .section-image img { margin-top: 12px; }
+        }
+        @media (max-width: 700px) {
+            h2 { font-size: 1.08rem; }
+            .section-content, .mini-section { padding: 9px 4vw; }
+            .section-image img { width: 95%; min-width: 95px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Alimentación</h1>
+    <p>Segundo Trimestre – Embarazo</p>
+</header>
+
+<main>
+
+    <!-- INTRODUCCIÓN -->
+    <div class="section-container">
+        <div class="section-image">
+            <img src="../img/img38.png" alt="Segundo trimestre embarazo alimentación">
+        </div>
+        <section class="section-content">
+            <ul>
+                <li>
+                    El <b>segundo trimestre del embarazo</b> es una etapa donde tu bebé crece rápidamente y tu cuerpo cambia para acompañarlo. Comer bien ahora es clave para prevenir problemas como anemia, diabetes del embarazo, presión alta y bajo peso al nacer. Una buena alimentación ayuda a que tú te sientas mejor y tu bebé se desarrolle sano.
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- REQUERIMIENTOS NUTRICIONALES -->
+    <div class="mini-section">
+        <h3>🍎 Requerimientos nutricionales esenciales</h3>
+        <ul>
+            <li>
+                <b>Calorías:</b> Aumenta la ingesta en <b>300-350 kcal/día</b> adicionales (total aprox. 2,200-2,500 kcal/día según necesidades individuales).
+                <br><i>Ejemplo:</i> Un snack saludable como yogur natural con fruta o un sándwich integral con huevo.
+            </li>
+            <li>
+                <b>Porciones pequeñas y frecuentes:</b> Come cada 3-4 horas para mantener energía estable y prevenir molestias digestivas.
+            </li>
+        </ul>
+    </div>
+    <!-- ALIMENTOS A EVITAR -->
+    <div class="section-container img-left">
+        <div class="section-image">
+            <img src="../img/img37.png" >
+        </div>
+        <section class="section-content">
+            <h2>🍞 Nutrientes que no te pueden faltar</h2>
+             <ul>
+            <li>
+                <b>Carbohidratos saludables:</b> Prefiere arroz, avena, pan y pasta integrales, papas, plátano y yuca. Te dan energía duradera y ayudan a tu digestión.
+            </li>
+            <li>
+                <b>Proteínas de calidad:</b> Tu bebé las necesita para formar sus tejidos. Incluye carnes magras (pollo, pavo), pescados bien cocidos, huevos, leche y legumbres. Intenta llegar a unos <b>70-90g al día</b>.
+            </li>
+            <li>
+                <b>Grasas buenas:</b> Elige aceites vegetales como el de oliva, frutos secos y semillas. Evita frituras y productos industriales (como pasteles o papas fritas de bolsa).
+            </li>
+        </ul>
+        </section>
+    </div>
+
+    <!-- MICRONUTRIENTES -->
+<div class="mini-section">
+    <h3>🥦 Vitaminas y minerales</h3>
+    <ul>
+        <li>
+            <b>Hierro:</b> Ayuda a prevenir la anemia y a mantener tu energía. Lo encuentras en carnes rojas, hígado, huevos, espinaca y cereales. Combínalo con frutas como naranja o kiwi para absorberlo mejor.
+        </li>
+        <li>
+            <b>Calcio:</b> Fortalece los huesos y dientes del bebé. Está en el yogur, queso, leches vegetales, brócoli y pescados como la sardina.
+        </li>
+        <li>
+            <b>Vitamina D:</b> Ayuda a fijar el calcio. La encuentras en pescados, huevos y algunos productos como leche o yogur. También puedes obtenerla con unos minutos de sol al día.
+        </li>
+        <li>
+            <b>Vitamina B12:</b> Es clave para el desarrollo del cerebro del bebé. Está en carnes, pescado, huevos y productos lácteos.
+        </li>
+        <li>
+            <b>Ácido fólico:</b> Apoya el desarrollo del sistema nervioso del bebé. Está en verduras de hoja verde, cereales, frutos secos y legumbres.
+        </li>
+        <li>
+            <b>Yodo:</b> Ayuda al crecimiento y al buen funcionamiento del cerebro. Lo encuentras en pescados, mariscos, lácteos y en la sal yodada.
+        </li>
+        <li>
+            <b>Omega-3:</b> Beneficia el desarrollo del cerebro y la vista. Está en pescados como salmón o sardina (dos veces por semana), semillas como chía y linaza, y en nueces.
+        </li>
+    </ul>
+</div>
+
+    <!-- ALIMENTOS A EVITAR -->
+    <div class="section-container img-left">
+        <div class="section-image">
+            <img src="../img/img36.png" alt="Alimentos a evitar">
+        </div>
+        <section class="section-content">
+            <h2>⛔ Alimentos que es mejor evitar</h2>
+            <ul>
+                <li><b>Carnes crudas o poco cocidas:</b> Pueden traer infecciones como toxoplasmosis.</li>
+                <li><b>Pescados con mucho mercurio:</b> Evita tiburón, pez espada o atún rojo.</li>
+                <li><b>Quesos o leche sin pasteurizar:</b> Pueden contener bacterias peligrosas como la listeria.</li>
+                <li><b>Cafeína en exceso:</b> No más de <b>1 taza de café al día</b> (máximo 200 mg).</li>
+                <li><b>Alcohol y tabaco:</b> Totalmente prohibidos durante el embarazo.</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- HIDRATACIÓN -->
+    <div class="mini-section">
+        <h3>💧 Bebe suficiente agua</h3>
+        <ul>
+            <li>
+                Toma entre <b>8 y 10 vasos de agua al día</b> para mantenerte bien hidratada.
+            </li>
+            <li>
+                También puedes incluir infusiones sin cafeína, caldos y frutas como sandía o melón.
+            </li>
+            <li>
+                Evita bebidas azucaradas o con mucha cafeína.
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="button-container">
+        <a href="../principal.html" class="cta-button">⬅️ Volver</a>
+    </div>
+</main>
+
+</body>
+</html>

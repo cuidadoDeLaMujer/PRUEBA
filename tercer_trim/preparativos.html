@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preparativos para el parto | Tercer Trimestre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-bebe: #f291b3;
+            --celeste-bebe: #225ece;
+            --blanco-crema: #FFFBFB;
+            --rosa-hover: #FC68A0;
+            --gris-oscuro-texto: #385c6e;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f7;
+            color: #333;
+            margin: 0;
+            padding: 0; 
+        }
+        header {
+            background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+            color: white;
+            padding: 28px 18px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px #92b1eb;
+        }
+        header h1 {
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        header p { 
+            font-size: 1.04rem;
+            font-weight: 600;
+            opacity: 0.92;
+            margin: 0;
+            font-style: italic;
+            letter-spacing: .2px;
+        }
+        main {
+            max-width: 1050px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        }
+        .intro {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            background: #fff;
+            border-radius: 18px;
+            padding: 18px 24px 18px 24px;
+            box-shadow: 0 4px 18px #c2185b18;
+            margin-bottom: 48px;
+            border-left: 6px solid #c2185b;
+        }
+        .intro div {
+            flex: 1 1 65%;
+        }
+        .intro img {
+            flex: 0 0 18%;
+            max-width: none;
+            height: 100px;
+            width: 140px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #b416557e; 
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            background: #fff;
+            border: 2px solid #f8cadd;
+            margin-top: -30px;
+        }
+        .intro img:hover {
+            transform: scale(1.05);
+        }
+        .intro p {
+            font-size: 1.00em;
+            color:  #385c6e;
+            text-align: justify;
+        }
+        section.section {
+            background: #fff;
+            border-radius: 18px;
+            padding: 18px 24px 18px 24px;
+            box-shadow: 0 4px 18px #c2185b18;
+            margin-bottom: 35px;
+            border-left: 6px solid #c2185b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 130ch;
+            padding-right: 12px;
+        }
+        section.section ul,
+        section.section ol {
+            padding-left: 22px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        section.section li,
+        section.section p {
+            font-size: 1.00em;
+            line-height: 1.6;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+             max-width: 140ch;
+            padding-right: 12px;
+        }
+        section.section ul li:last-child,
+        section.section p:last-child {
+            margin-bottom: 0;
+        }
+        section.section h2 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-top: 1;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        section.section h4 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-bottom: 3px;
+            margin-top: 0;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 6px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .highlight {
+            background-color: #e7e9fd;
+            color:#2b3850; 
+            font-weight: 600;
+            border-left: 6px solid #225ece;
+            padding: 18px 20px 18px 22px;
+            margin-top: 20px;
+            border-radius: 12px;
+            font-size: 1.00rem;
+        }
+        .highlight-small {
+            background-color: #e7e9fd;
+            color:#2b3850; 
+            font-weight: 600;
+            border-left: 6px solid #225ece;
+            padding: 18px 20px 18px 22px;
+            margin-top: 20px;
+            border-radius: 12px;
+            font-size: 1.00rem;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta-button {
+            padding: 12px 73px;
+            align-self: center;
+            width: auto;
+            min-width: 0;
+            background:#d5dffc;
+            color: #0c3277; 
+            border: none;
+            border-radius: 22px;
+            font-size: 1.06em;
+            font-weight: 720;
+            cursor: pointer;
+            transition: all 0.28s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.21);
+            transform: skewX(-20deg);
+            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            transform: translateY(-2.5px) scale(1.03);
+            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+        }
+        .cta-button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+        }
+        @keyframes fadeInLinks {
+            from { opacity: 0; transform: translateY(25px);}
+            to   { opacity: 1; transform: translateY(0);}
+        }
+        .content-image {
+            display: block;
+            max-width: 70%;
+            height: auto;
+            margin: 25px auto;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px #b416557e; 
+            object-fit: cover;
+            margin-top: 8px;
+            transition: transform 0.3s ease;
+            border: 2px solid #f8cadd;
+        }
+        .content-image:hover {
+             transform: scale(1.05);
+        }
+        @media (max-width: 900px) {
+            main { max-width: 99vw; }
+            .intro { flex-direction: column; padding: 18px 5vw; }
+            .intro img { width: 62%; height: auto; margin: 0 auto 16px auto; }
+            section.section { padding: 14px 6vw 14px 6vw; }
+            section.section h2 {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            .content-image {
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+  <h1>Preparativos para el parto</h1>
+  <p>Tercer Trimestre</p>
+</header>
+<main>
+
+<section class="section">
+ <h2>👜 1. Maleta para el hospital: qué llevar y por qué</h2>
+<img src="../img/img54.png" class="content-image">
+<ul>
+  <li><b>Documentos importantes:</b> DNI, carné de controles prenatales, ecografías, análisis recientes, grupo sanguíneo, resultados especiales (como pruebas de laboratorio) y autorización médica si tienes cesárea programada.</li>
+  
+  <li><b>Para ti:</b> Bata o camisón cómodo (de preferencia con abertura para lactancia), brasieres de lactancia, ropa interior grande y cómoda, apósitos posparto, toalla personal, pantuflas y bolsa para ropa sucia.</li>
+
+  <li><b>Higiene personal:</b> Cepillo y pasta dental, jabón neutro, shampoo, peine, desodorante sin perfume fuerte, papel higiénico, pañuelos desechables, sujetador de cabello y una botella de agua reutilizable.</li>
+  <li><b>Para el bebé:</b> 
+  2 a 3 mudas completas (body, pantalón, gorrito, medias), pañales RN (mínimo 6 unidades), toallitas húmedas sin alcohol, crema para prevenir paspaduras y una toalla pequeña para limpiar babeo. También lleva una mantita para envolver al bebé en brazos y un biberón por si surge alguna dificultad con la lactancia.
+</li>
+</ul>
+
+  <div class="highlight">
+    🎒 Ten esta maleta lista desde la semana 36. Guárdala cerca de la puerta o en el vehículo si vives lejos del hospital.
+  </div>
+</section>
+
+<section class="section">
+  <h2>🚗 2. Traslado al hospital</h2>
+  <ul>
+    <li><b>Transporte principal y alternativo:</b> Define quién te llevará y quién puede reemplazarlo si no está disponible. Considera opciones como taxi, ambulancia o un vecino de confianza.</li>
+    <li><b>Horarios:</b> Planea qué hacer si el parto comienza de noche o en horario laboral. Muchos partos inician fuera del horario habitual.</li>
+    <li><b>Distancia:</b> Si vives a más de 30 minutos del hospital, evalúa quedarte temporalmente cerca durante la última semana.</li>
+    <li><b>Otros hijos/as:</b> Si ya tienes hijos, asegúrate de quién se encargará de ellos mientras estés en el hospital.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>🏠 3. Tu casa lista para el regreso</h2>
+  <img src="../img/img55.png" class="content-image">
+  <ul>
+    <li><b>Espacio para el bebé:</b> Prepara un lugar seguro y limpio para dormir, con sábanas lavadas y abrigo suave.</li>
+    <li><b>Higiene y comodidad:</b> Ten a la mano pañales, toallitas, algodón, jabón neutro, gasas, y una superficie firme para cambiar al bebé.</li>
+    <li><b>Ropa propia posparto:</b> Deja preparada ropa cómoda y fácil de poner, especialmente si tienes puntos o te realizaron cesárea.</li>
+    <li><b>Comidas listas:</b> Si puedes, congela porciones de comida fáciles de calentar o pide ayuda para los primeros días.</li>
+    <li><b>Red de apoyo:</b> Identifica a personas que puedan ayudarte con tareas cotidianas como limpieza, compras o cuidar al bebé.</li>
+  </ul>
+</section>
+
+<section class="button-container">
+  <a href="../principal.html" class="cta-button">⬅️ Volver</a>
+</section>
+
+</main>
+</body> 
+</html>

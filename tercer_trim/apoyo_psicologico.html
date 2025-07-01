@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apoyo psicológico | Tercer Trimestre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-bebe: #f291b3;
+            --celeste-bebe: #225ece;
+            --blanco-crema: #FFFBFB;
+            --rosa-hover: #FC68A0;
+            --gris-oscuro-texto: #385c6e;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f7;
+            color: #333;
+            margin: 0;
+            padding: 0; 
+        }
+        header {
+            background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+            color: white;
+            padding: 28px 18px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px #92b1eb;
+        }
+        header h1 {
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        header p { 
+            font-size: 1.04rem;
+            font-weight: 600;
+            opacity: 0.92;
+            margin: 0;
+            font-style: italic;
+            letter-spacing: .2px;
+        }
+        main {
+            max-width: 1050px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        }
+        .section-container { 
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 28px;
+            margin-bottom: 35px;
+        }
+        .section-content {
+            flex: 2 1 380px;
+            padding: 18px 24px 18px 24px;
+            border-left: 6px solid #c2185b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px #c2185b18;
+            max-width: 130ch;
+            padding-right: 12px;
+        }
+        .section-image {
+            flex: 1 1 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            margin: 0 auto;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .section-image img {
+            width: 85%; 
+            width: 260px;
+            height: 140px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-top: 0;
+            margin-bottom: 6px;
+            box-shadow: 0 4px 15px #b416557e; 
+            border: 2px solid #f8cadd;
+            transition: transform 0.22s ease;
+            background: #fff;
+        }
+        .section-image img:hover {
+            transform: scale(1.06);
+        }
+        .section-image .image-caption {
+            text-align: center;
+            font-size: 0.91em;
+            color: #7d3ba3;
+            margin-top: 7px;
+            font-style: italic;
+        } 
+        h2 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h4 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-bottom: 3px;
+            margin-top: 0;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 6px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-content ul, .section-content ol {
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .section-content li, .section-content p {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            max-width: 130ch;
+            padding-right: 12px;
+        }
+        .section-content ul li:last-child,
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+        .mini-section {
+            background: #fff;
+            border-left: 6px solid #225ece;
+            color: #385c6e;
+            font-size: 1.00em;
+            border-radius: 18px;
+            padding: 18px 24px;
+            margin-top: 8px;
+            box-shadow: 0 4px 18px #225ece18;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+        .mini-section h3 {
+            color: #225ece;
+            font-size: 1.3rem;
+            padding-bottom: 8px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-bottom: 3px solid #FF7F50;
+        }
+        .mini-section ul, .mini-section ol {
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .mini-section li, .mini-section p {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            max-width: 130ch;
+            padding-right: 12px;
+        }
+        .mini-section ul li:last-child,
+        .mini-section p:last-child {
+            margin-bottom: 0;
+        }
+        .highlight-info {
+            background: #fae7fd;
+            border-left: 6px solid #c2185b;
+            color: #385c6e;
+            font-size: 1.00em;
+            border-radius: 18px;
+            padding: 18px 24px;
+            margin-bottom: 18px;
+            margin-top: 35px;
+            box-shadow: 0 4px 18px #c2185b18;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .highlight-info-title {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .highlight-info-text {
+            font-size: 1.00em;
+            line-height: 1.5;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            max-width: 130ch;
+            padding-right: 2px;
+        }
+        .highlight-info-text:last-child {
+            margin-bottom: 0;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 32px;
+        }
+        .cta-button {
+            padding: 12px 73px;
+            align-self: center;
+            width: auto;
+            min-width: 0;
+            background:#d5dffc;
+            color: #0c3277; 
+            border: none;
+            border-radius: 22px;
+            font-size: 1.06em;
+            font-weight: 720;
+            cursor: pointer;
+            transition: all 0.28s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.21);
+            transform: skewX(-20deg);
+            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            transform: translateY(-2.5px) scale(1.03);
+            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+        }
+        .cta-button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+        }
+        @media (max-width: 950px) {
+            main { max-width: 99vw; }
+            .section-container { flex-direction: column; gap: 0; }
+            .section-content, .section-image { border-radius: 15px; }
+            .section-content { padding: 14px 6vw 14px 6vw; }
+            .section-image { max-width: 99vw; min-width: 0; padding-bottom: 0; }
+            .section-image img { margin-top: 12px; }
+        }
+        @media (max-width: 700px) {
+            h2 { font-size: 1.08rem; }
+            .section-content, .mini-section { padding: 9px 4vw; }
+            .section-image img { width: 95%; min-width: 95px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Apoyo psicológico</h1>
+    <p>Tercer trimestre</p>
+</header>
+
+<main>
+    <!-- INTRODUCCIÓN -->
+    <div class="section-container">
+        <div class="section-image">
+            <img src="../img/img48.png">
+        </div>
+     <section class="section-content">
+    <h4>🧠 ¿Por qué es importante el cuidado psicológico en esta etapa?</h4>
+    <p>
+        El acompañamiento psicológico en esta etapa es importante porque ayuda a manejar el estrés, los miedos y la ansiedad que pueden surgir. Asimismo, mantener la estabilidad emocional favorece el descanso, mejora la toma de decisiones y permite enfrentar el parto y el posparto con mayor claridad y preparación.
+    </p>
+</section>
+
+
+
+    </div>
+
+    <!-- SEÑALES DE ALERTA -->
+    <div class="mini-section">
+        <h3>🚨 Señales que indican que necesitas apoyo emocional</h3>
+        <ul>
+            <li>Lloras con frecuencia sin saber bien por qué.</li>
+            <li>Te sientes sola, irritada o con miedo constante.</li>
+            <li>Te cuesta dormir o descansar aunque estés agotada.</li>
+            <li>Sientes que no vas a poder con lo que viene.</li>
+            <li>Te alejas de personas cercanas o te cuesta hablar de lo que sientes.</li>
+        </ul>
+        <p style="margin-top:10px;">
+            Ninguna de estas emociones te hace “mala madre”. Al contrario: pedir ayuda es una forma de protegerte y cuidar al bebé.
+        </p>
+    </div>
+
+    <!-- BENEFICIOS DEL APOYO -->
+    <div class="section-container" style="flex-direction: row;">
+        <div class="section-image"> 
+            <img src="../img/img49.png" alt="Terapia en el embarazo">
+        </div>
+        <section class="section-content">
+            <h2>💬 ¿En qué ayuda hablar con una psicóloga perinatal?</h2>
+            <ul>
+                <li>Te ayuda a manejar el miedo al parto y a lo desconocido.</li>
+                <li>Te da herramientas para regular la ansiedad, la culpa o el estrés.</li>
+                <li>Te ayuda a fortalecer tu autoestima y confianza como futura madre.</li>
+                <li>Te permite hablar de lo que no siempre se dice: dudas, frustración o presión familiar.</li>
+                <li>También puede ayudar a tu pareja o familia a acompañarte mejor.</li>
+                <li>Te ayuda a prepararte emocionalmente para el posparto (que también puede ser desafiante).</li>
+            </ul>
+    </section>
+    </div>
+
+    <!-- CONSEJOS PRÁCTICOS -->
+  <div class="mini-section">
+    <h3>🌿 Pequeñas cosas que pueden ayudarte</h3>
+    <ul>
+        <li>Habla con alguien de confianza sobre lo que estás sintiendo, aunque no sepas exactamente por qué.</li>
+        <li>Escribe lo que piensas o te preocupa: vaciar la mente puede ayudarte a ver todo con más claridad.</li>
+        <li>Tómate al menos un momento del día solo para ti: respirar, descansar o desconectarte sin culpa.</li>
+        <li>No te compares con otras embarazadas. Cada cuerpo, cada historia y cada embarazo es distinto.</li>
+        <li>Busca pequeñas pausas de calma, incluso si son solo 10 minutos. </li>
+    </ul>
+    </div>
+
+ <div class="highlight-info">
+    <div class="highlight-info-title">🗓️ Sesión de apoyo psicológico disponible</div>
+    <div class="highlight-info-text">
+        <strong>🕐 Fecha:</strong> Viernes 12 de julio de 2025<br>
+        <strong>⏰ Hora:</strong> 2:00 p. m - 4:30 p.m<br>
+        <strong>👩‍⚕️ A cargo:</strong> Lic. Andrea Rojas – Psicóloga perinatal<br>
+        <strong>➡️ Enlace de ingreso:</strong>
+        <a href="https://us05web.zoom.us/j/84003119156?pwd=zhHePtYwuaPmlp3vuo79fUkRyQtAf7.1" target="_blank">zoom.us/j/84003119156</a>
+        <br><small style="font-size: 0.9em; color: #555;">(La atención se brindará en orden de llegada, exclusivamente dentro del horario programado)</small>
+    </div>
+</div>
+
+  <div class="button-container">
+        <a href="../principal.html" class="cta-button">⬅️ Volver</a>
+    </div>
+</main>
+
+
+</body>
+</html>

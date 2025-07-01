@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ejercicio suave para mantenerse activa | Segundo Trimestre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-bebe: #f291b3;
+            --celeste-bebe: #225ece;
+            --blanco-crema: #FFFBFB;
+            --rosa-hover: #FC68A0;
+            --gris-oscuro-texto: #385c6e;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f7;
+            color: #333;
+            margin: 0;
+            padding: 0; 
+        }
+        header {
+            background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+            color: white;
+            padding: 28px 18px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px #92b1eb;
+        }
+        header h1 {
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        header p { 
+            font-size: 1.04rem;
+            font-weight: 600;
+            opacity: 0.92;
+            margin: 0;
+            font-style: italic;
+            letter-spacing: .2px;
+        }
+        main {
+            max-width: 1050px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        }
+        .section-container { 
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 28px;
+            margin-bottom: 35px;
+        }
+        .section-content {
+            flex: 2 1 380px;
+            padding: 18px 24px 18px 24px;
+            border-left: 6px solid #c2185b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px #c2185b18;
+        }
+        .section-image {
+            flex: 1 1 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            margin: 0 auto;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .section-image img {
+            width: 85%; 
+            width: 260px;
+            height: 140px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-top: 0;
+            margin-bottom: 6px;
+            box-shadow: 0 4px 15px #b416557e; 
+            border: 2px solid #f8cadd;
+            transition: transform 0.22s ease;
+            background: #fff;
+        }
+        .section-image img:hover {
+            transform: scale(1.06);
+        }
+        .section-image .image-caption {
+            text-align: center;
+            font-size: 0.91em;
+            color: #7d3ba3;
+            margin-top: 7px;
+            font-style: italic;
+        } 
+        h2 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h4 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-bottom: 3px;
+            margin-top: 0;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 6px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-content ul, .section-content ol {
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .section-content li, .section-content p {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            
+            padding-right: 12px;
+        }
+        .section-content ul li:last-child,
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+        .mini-section {
+            background: #fff;
+            border-left: 6px solid #225ece;
+            color: #385c6e;
+            font-size: 1.00em;
+            border-radius: 18px;
+            padding: 18px 24px;
+            margin-bottom: 35px;
+            margin-top: 8px;
+            box-shadow: 0 4px 18px #225ece18;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .mini-section h3 {
+            color: #225ece;
+            font-size: 1.3rem;
+            padding-bottom: 8px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-bottom: 3px solid #FF7F50;
+        }
+        .mini-section ul, .mini-section ol {
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .mini-section li, .mini-section p {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            padding-right: 12px;
+        }
+        .mini-section ul li:last-child,
+        .mini-section p:last-child {
+            margin-bottom: 0;
+        }
+        .highlight-info {
+            background: #fae7fd;
+            border-left: 6px solid #c2185b;
+            color: #385c6e;
+            font-size: 1.00em;
+            border-radius: 18px;
+            padding: 18px 24px;
+            margin-bottom: 18px;
+            margin-top: 35px;
+            box-shadow: 0 4px 18px #c2185b18;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .highlight-info-title {
+            color: #c2185b;
+            font-size: 1.2rem;
+            padding-bottom: 6px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 2px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .highlight-info-text {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+        }
+        .highlight-info-text:last-child {
+            margin-bottom: 0;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 32px;
+        }
+        .cta-button {
+            padding: 12px 73px;
+            align-self: center;
+            width: auto;
+            min-width: 0;
+            background:#d5dffc;
+            color: #0c3277; 
+            border: none;
+            border-radius: 22px;
+            font-size: 1.06em;
+            font-weight: 720;
+            cursor: pointer;
+            transition: all 0.28s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.21);
+            transform: skewX(-20deg);
+            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            transform: translateY(-2.5px) scale(1.03);
+            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+        }
+        .cta-button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+        }
+        @media (max-width: 950px) {
+            main { max-width: 99vw; }
+            .section-container { flex-direction: column; gap: 0; }
+            .section-content, .section-image { border-radius: 15px; }
+            .section-content { padding: 14px 6vw 14px 6vw; }
+            .section-image { max-width: 99vw; min-width: 0; padding-bottom: 0; }
+            .section-image img { margin-top: 12px; }
+        }
+        @media (max-width: 700px) {
+            h2 { font-size: 1.08rem; }
+            .section-content, .mini-section { padding: 9px 4vw; }
+            .section-image img { width: 95%; min-width: 95px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Ejercicio para mantenerse activa</h1>
+    <p>Segundo Trimestre – Embarazo</p>
+</header>
+<main>
+    <!-- Imagen a la derecha -->
+    <div class="section-container" style="flex-direction: row-reverse;">
+        <div class="section-image">
+            <img src="../img/img33.png" alt="Ejercicio embarazada">
+        </div>
+        <section class="section-content">
+            <h4>🏃‍♀️ ¿Por qué es importante el ejercicio?</h4>
+            <p>
+                En el segundo trimestre muchas mujeres se sienten con más energía. Realizar ejercicio mejora la circulación, ayuda a prevenir molestias físicas y favorece el bienestar emocional. Además, fortalece el cuerpo para adaptarse a los cambios del embarazo y prepararse para el parto.
+            </p>
+        </section>
+    </div>
+
+    <!-- Beneficios del ejercicio, imagen a la izquierda -->
+    <div class="section-container" style="flex-direction: row;">
+        <div class="section-image">
+            <img src="../img/img34.png" alt="Beneficios actividad física embarazo">
+        </div>
+        <section class="section-content">
+            <h2>💪 Beneficios de mantenerse activa</h2>
+            <ul>
+            <li>Disminuye el riesgo de diabetes gestacional y presión arterial elevada.</li>
+            <li>Favorece el control del peso sin afectar el desarrollo del bebé.</li>
+            <li>Fortalece los músculos que se usan durante el parto y la recuperación.</li>
+            <li>Mejora la oxigenación y el estado general del sistema cardiovascular.</li>
+        </ul>
+        </section>
+    </div>
+
+    <!-- Mini sección: Ejercicios recomendados -->
+   <!-- Mini sección: Ejercicios recomendados -->
+<div class="mini-section">
+    <h3>🌱 Ejercicios recomendados</h3>
+    <ul>
+        <li><b>Caminatas diarias:</b> 20 a 30 minutos al día, a paso moderado. Mejora la circulación y reduce hinchazón.</li>
+        
+<li><b>Yoga prenatal:</b> 2 a 3 veces por semana, 30 minutos. Incluye posturas suaves y respiración guiada. Ayuda a aliviar dolores, reducir el estrés y fortalecer la espalda, piernas y pelvis.</li>
+    <li><b>Elevación de piernas:</b> Acostada de lado, eleva lentamente una pierna recta y bájala. Haz 10 repeticiones por lado. Mejora la fuerza de glúteos, caderas y ayuda a prevenir molestias en la zona lumbar.</li>
+<li><b>Ejercicios de Kegel:</b> Acostada boca arriba con rodillas flexionadas, contrae los músculos del suelo pélvico (como si aguantaras las ganas de orinar) durante 5 segundos y relaja. Haz 10 repeticiones, 2 o 3 veces al día. Fortalece el suelo pélvico y previene escapes de orina.</li>
+
+</ul>
+</div>
+
+    <!-- Seguridad y precauciones, imagen a la derecha -->
+    <div class="section-container" style="flex-direction: row-reverse;">
+        <div class="section-image">
+            <img src="../img/img35.png" alt="Precauciones ejercicio embarazo">
+        </div>
+        <section class="section-content">
+            <h2>⚠️ Seguridad y cuidados al ejercitarse</h2>
+            <ul>
+                <li>Evita ejercicios de alto impacto, saltos o con riesgo de caída.</li>
+                <li>No te exijas: si sientes mareo, dolor o falta de aire, detente.</li>
+                <li>Hidrátate antes, durante y después de la actividad.</li>
+                <li>Utiliza ropa cómoda y calzado adecuado.</li>
+                <li>Consulta siempre con tu profesional de salud antes de iniciar una rutina nueva.</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="highlight-info">
+        <div class="highlight-info-title">📝 Nota importante:</div>
+        <div class="highlight-info-text">
+            Mantenerte activa en el segundo trimestre no solo mejora tu salud, también prepara tu cuerpo para el nacimiento. Cada embarazo es diferente, por eso es clave escuchar tu cuerpo y seguir las recomendaciones médicas.
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="../principal.html" class="cta-button">⬅️ Volver</a>
+    </div>
+</main>
+
+</body>
+</html>

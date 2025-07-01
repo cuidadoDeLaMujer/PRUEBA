@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Embarazo por Trimestres</title>
+<style>
+   :root {
+            --rosa-bebe: #f291b3;
+            --celeste-bebe: #225ece;
+            --blanco-crema: #FFFBFB;
+            --rosa-hover: #FC68A0;
+        }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f5f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .topbar {
+    background-color: #f5f5f7;
+    color: #382e5a;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+  }
+  header {
+    background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+    color: white;
+    padding: 22px 15px;
+    text-align: center;
+    position: relative;
+  }
+  .header-content {
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .header-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    grid-column: 1;
+  }
+  .header-titles h1 {
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 6px;
+    margin-top: 0;
+    font-size: 2.5rem;
+    font-weight: 700; 
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+  }
+  .eslogan-header {
+    font-size: 1.18rem;
+    color: #eaeafa;
+    font-weight: 500;
+    letter-spacing: .2px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    text-align: center;
+  }
+ .logo-header {
+    position: absolute;
+    top: 50%;
+    left: 160px; /* Cambia este valor según cuánto quieras correrlo a la derecha desde la izquierda */
+    transform: translateY(-50%);
+    width: 90px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(194, 24, 91, 0.17);
+    object-fit: contain;
+    border: 2px solid #f8cadd;
+    z-index: 3;
+    overflow: hidden;
+}
+  .menu-container {
+    background: #eaeafa;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 4px 10px #92b1eb;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    max-width: 1100px;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 50px;
+  }
+  .menu-nav {
+    display: flex;
+    gap: 0;
+    margin-right: 30px;
+  }
+  .menu-btn {
+    background: none;
+    color:  #86003a;
+    border: none;
+    border-right: 1px solid #f3e5f5;
+    border-radius: 0;
+    padding: 0 32px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    min-height: 45px;
+  }
+  .menu-btn:last-child {
+    border-right: none;
+  }
+  .menu-btn.active, .menu-btn:hover {
+    background:#dfe7ff;
+    color: #154194; 
+    border-radius: 0;
+  }
+  main {
+    padding: 10px 20px;
+    background-color: #f7f3f5;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 0;
+  }
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    min-height: 150px;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #c2185b33; 
+    padding: 20px 16px;
+    width: 250px;
+    height: 142px;
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+    border: 2px solid #c2185b;
+  }
+  .card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 22px #92b1eb;
+    border-color: #225ece; 
+  }
+  .card h2 {
+    font-family: 'Pacifico', cursive;
+    margin-top: 0.3em;
+    font-size: 1.4rem;
+    color: #FF7F50;
+    margin-bottom: 0.5em;
+  }
+  .card p {
+    font-size: 1.00em;
+    color:  #385c6e;
+  }
+  .enlaces-trimestre {
+   display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    background: white;
+    border-radius: 14px;
+    padding: 25px 18px;
+    max-width: 390px;
+    height:275px;
+    margin: 20px auto 15px auto;
+    animation: fadeInLinks 0.5s;
+    box-shadow: 0 8px 15px #c2185b33; 
+    border: 2px solid #c2185b;
+  }
+  .enlaces-trimestre h3 {
+    font-size: 1.50rem;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: #FF7F50;
+    margin-top: 0.1em;      /* Margen superior más pequeño */
+    margin-bottom: 0.1em;   /* Margen inferior más pequeño */
+}
+  .enlaces-trimestre ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style: disc;
+  }
+  .enlaces-trimestre ul li {
+    margin-bottom: 8px;
+    font-size: 1.07em;
+  }
+  .enlaces-trimestre ul li a {
+
+    text-decoration: none;
+    transition: color 0.17s;
+    font-size: 1.00em; 
+    color:  #385c6e;
+  }
+  .enlaces-trimestre ul li a:hover {
+    color: #db1c68;
+    text-decoration: underline;
+  }
+  
+ .cta-button {
+            padding: 17px 70px;
+            align-self: center;
+  width: auto;
+  min-width: 0;
+            background:#d5dffc;
+    color: #0c3277; 
+            border: none;
+            border-radius: 30px;
+            font-size: 1.06em;
+            font-weight: 720;
+            cursor: pointer;
+            transition: all 0.28s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.21);
+            transform: skewX(-20deg);
+            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            transform: translateY(-2.5px) scale(1.03);
+            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+        }
+        .cta-button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+        }
+  @keyframes fadeInLinks {
+    from { opacity: 0; transform: translateY(25px);}
+    to   { opacity: 1; transform: translateY(0);}
+  }
+  /* Equipo */
+  .team-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+  }
+  .team-member {
+    background: #f1f1ff;;
+    border-radius: 10px;
+    padding: 15px 10px 10px 10px;
+    width: 255px;
+    height: 215px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 3px 8px #92b1eb;
+  }
+  .team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid  #d4d4f9;
+    margin-bottom: 7px;
+    margin-top: 2px;
+  }
+  .team-member .name {
+    font-weight: 600;
+    color: #c2185b;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  .team-member .role {
+    font-size: 15px;
+    color: #385c6e;
+    margin-bottom: 2px;
+  }
+  .team-member .email a {
+    color: #a0144b;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 13px;
+    word-break: break-all;
+  }
+  .team-member .email a:hover {
+    color: #c2185b;
+  }
+
+  .card ul {
+   margin: 20px 0 0 0;
+  list-style: disc;
+  text-align: left;
+}
+.card ul li {
+  margin-bottom: 8px;
+  font-size: 1.07em;
+}
+.card ul li a {
+  text-decoration: none;
+  transition: color 0.17s;
+  font-size: 1.00em;
+  color:  #385c6e;
+}
+.card ul li a:hover {
+  color: #db1c68;
+  text-decoration: underline;
+}
+  @media (max-width: 900px) {
+    .cards-container { flex-direction: column; align-items: center; }
+    .card { width: 90vw; max-width: 370px;}
+    .team-row { flex-direction: column; gap: 15px;}
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span id="datetime"></span>
+</div>
+<header>
+  <div class="header-content">
+    <div class="header-titles">
+      <h1>Creciendo Junt@s</h1>
+      <div class="eslogan-header">Una red, dos vidas</div>
+    </div>
+    <img src="img/logo.jpg" alt="Logo Embarazo" class="logo-header">
+  </div>
+</header>
+<div class="menu-container">
+  <nav class="menu-nav">
+    <button class="menu-btn active" id="planesBtn" onclick="mostrarCards()">Trimestres del Embarazo</button>
+    <button class="menu-btn" id="zonaBtn" onclick="mostrarZonaInteractiva()">Zona interactiva</button>
+    <button class="menu-btn" id="equipoBtn" onclick="mostrarEquipo()">Conoce nuestro equipo</button>
+  </nav>
+</div>
+<main>
+  <div id="mainContent"></div>
+</main>
+<script>
+const enlacesPorTrimestre = [
+  {
+      nombre: "Primer Trimestre",
+      emoji: "🌱",
+      descripcion: "De la semana 1 a la 12:<br> Inician los cambios, el cuerpo se adapta y el bebé comienza a formarse.",
+  enlaces: [
+    { nombre: "¿Qué sucede en las primeras semanas?", url: "primer_trim/primeras_semanas.html" },
+    { nombre: "Controles y examenes", url: "primer_trim/controles_examenes.html" },
+    { nombre: "Alimentación y suplementos recomendados", url: "primer_trim/alimentacion.html" },
+    { nombre: "Charlas sobre el inicio del embarazo", url: "primer_trim/charlas.html" },
+    { nombre: "Cuidados personales y de higiene", url: "primer_trim/cuidados_higiene.html" },
+    { nombre: "Complicaciones", url: "primer_trim/complicaciones.html" }
+  ]
+},
+  {
+  nombre: "Segundo Trimestre",
+  emoji: "🌸",
+  descripcion: "De la semana 13 a la 27:<br> Se estabilizan los cambios, el bebé crece con fuerza y ya se perciben sus movimientos.",
+  enlaces: [
+    { nombre: "Descanso y posturas para dormir bien", url: "segundo_trim/descanso_posturas.html" },
+    { nombre: "Ejercicios para mantenerse activa", url: "segundo_trim/ejercicios.html" },
+    { nombre: "Alimentación", url: "segundo_trim/alimentacion.html" },
+    { nombre: "Charlas sobre parto, lactancia y preparación", url: "segundo_trim/charlas.html" },
+    { nombre: "Trabajo y bienestar", url: "segundo_trim/trabajo_bienestar.html" },
+    { nombre: "Complicaciones", url: "segundo_trim/complicaciones.html" },
+  ]
+},
+  {
+    nombre: "Tercer Trimestre",
+    emoji: "👶",
+    descripcion: "De la semana 28 al nacimiento:<br> Preparativos finales, el bebé madura y el cuerpo se alista para el parto.",
+    enlaces: [
+      { nombre: "Preparativos para el parto", url: "tercer_trim/preparativos.html" },
+      { nombre: "Señales de parto", url: "tercer_trim/señales_parto.html" },
+      { nombre: "Prácticas de respiración y ejercicios", url: "tercer_trim/respiracion_ejercicio.html" },
+      { nombre: "Charlas sobre cuidados del recién nacido", url: "tercer_trim/charlas.html" },
+      { nombre: "Apoyo psicológico", url: "tercer_trim/apoyo_psicologico.html" },
+      { nombre: "Complicaciones", url: "tercer_trim/complicaciones.html" }
+    ]
+  }
+];
+
+const zonaInteractiva = [
+  {
+    nombre: "Apoyo en línea",
+    emoji: "💬",
+    enlaces: [
+      { nombre: "Habla con nuestro ChatBot", url: "zona_interactiva/chatbot.html" }
+    ]
+  },
+  {
+    nombre: "Relajación",
+    emoji: "🎶",
+    enlaces: [
+      { nombre: "Melodías", url: "zona_interactiva/melodias.html" },
+      { nombre: "Mitos y verdades", url: "zona_interactiva/mitos_verdades.html" },
+    ]
+  }
+];
+
+// Datos del equipo
+const equipo = [
+  { nombre: "Arista Bermúdez, Gina", rol: "Enfermera", email: "Ginacesi.98@gmail.com", foto: "img/foto01.jpeg" },
+  { nombre: "Castañeda Cruz, Nayeli", rol: "Enfermera", email: "ncastanedacr@ucvvirtual.edu.pe", foto: "img/foto05.jpeg" },
+  { nombre: "Chigne Navarro, Gina", rol: "Enfermera", email: "ginachignenavarro@gmail.com", foto: "img/foto03.jpeg" },
+  { nombre: "Guevara Sánchez, Clemifer", rol: "Enfermera", email: "Clemiyami@gmail.com", foto: "img/foto02.jpeg" },
+  { nombre: "Guarniz De La Cruz, Gloria", rol: "Enfermera", email: "glorianicolguarnizdelacruz@gmail.com", foto: "img/foto04.jpeg" }
+];
+
+function mostrarCards() {
+  const container = document.getElementById('mainContent');
+  let html = `<div class="cards-container">`;
+  enlacesPorTrimestre.forEach((trimestre, idx) => {
+    html += `<div class="card" onclick="mostrarTrimestre(${idx})">
+      <h2>${trimestre.emoji} ${trimestre.nombre}</h2>
+      <p>${trimestre.descripcion}</p>
+    </div>`;
+  });
+  html += `</div>`;
+  container.innerHTML = html;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Selecciona todos los botones del menú
+  const menuBtns = document.querySelectorAll('.menu-btn');
+  menuBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Quita la clase activa de todos
+      menuBtns.forEach(b => b.classList.remove('active'));
+      // Añade la clase activa al botón clicado
+      this.classList.add('active');
+    });
+  });
+});
+function mostrarTrimestre(idx) {
+  const trimestre = enlacesPorTrimestre[idx];
+  let html = `<div class="enlaces-trimestre">
+    <h3>${trimestre.emoji} ${trimestre.nombre}</h3>
+    <ul>`;
+  trimestre.enlaces.forEach(e => {
+    // CORREGIDO: Se eliminó target="_blank" para que los enlaces se abran en la misma página
+    html += `<li><a href="${e.url}">${e.nombre}</a></li>`;
+  });
+  html += `</ul>
+    <button class="cta-button" onclick="mostrarCards()">Volver</button>
+  </div>`;
+  document.getElementById('mainContent').innerHTML = html;
+}
+function mostrarEquipo() {
+  document.getElementById('planesBtn').classList.remove('active');
+  document.getElementById('equipoBtn').classList.add('active');
+  let html = '';
+  // Primeros 3 arriba
+  html += `<div class="team-row">`;
+  equipo.slice(0, 3).forEach(miembro => {
+    html += `<div class="team-member">
+      <img src="${miembro.foto}" alt="${miembro.nombre}">
+      <div class="name">${miembro.nombre}</div>
+      <div class="role">${miembro.rol}</div>
+      <div class="email"><a href="mailto:${miembro.email}">${miembro.email}</a></div>
+    </div>`;
+  });
+  html += '</div>';
+  // Siguientes abajo (de 3 a 5)
+  if (equipo.length > 3) {
+    html += `<div class="team-row">`;
+    equipo.slice(3, 5).forEach(miembro => {
+      html += `<div class="team-member">
+        <img src="${miembro.foto}" alt="${miembro.nombre}">
+        <div class="name">${miembro.nombre}</div>
+        <div class="role">${miembro.rol}</div>
+        <div class="email"><a href="mailto:${miembro.email}">${miembro.email}</a></div>
+      </div>`;
+    });
+    html += '</div>';
+  }
+  document.getElementById('mainContent').innerHTML = html;
+}
+
+function mostrarZonaInteractiva() {
+  document.querySelectorAll('.menu-btn').forEach(btn => btn.classList.remove('active'));
+  document.getElementById('zonaBtn').classList.add('active');
+  let html = `<div class="cards-container">`;
+  zonaInteractiva.forEach((zona) => {
+    html += `<div class="card">
+      <h2>${zona.emoji} ${zona.nombre}</h2>
+      <ul>`;
+    zona.enlaces.forEach(e => {
+      // CORREGIDO: Se eliminó target="_blank" para que los enlaces se abran en la misma página
+      html += `<li><a href="${e.url}">${e.nombre}</a></li>`;
+    });
+    html += `</ul>
+    </div>`;
+  });
+  html += `</div>`;
+  document.getElementById('mainContent').innerHTML = html;
+}
+
+
+// Fecha y hora
+function actualizarFechaHora() {
+  const span = document.getElementById("datetime");
+  const ahora = new Date();
+  const dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+  const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  const diaSemana = dias[ahora.getDay()];
+  const dia = ahora.getDate().toString().padStart(2, '0');
+  const mes = meses[ahora.getMonth()];
+  const año = ahora.getFullYear();
+  const hora = ahora.getHours().toString().padStart(2, '0');
+  const minuto = ahora.getMinutes().toString().padStart(2, '0');
+  const segundo = ahora.getSeconds().toString().padStart(2, '0');
+  span.textContent = `${diaSemana}, ${dia} de ${mes} de ${año} - ${hora}:${minuto}:${segundo}`;
+}
+setInterval(actualizarFechaHora, 1000);
+actualizarFechaHora();
+
+mostrarCards();
+</script>
+</body>
+</html>

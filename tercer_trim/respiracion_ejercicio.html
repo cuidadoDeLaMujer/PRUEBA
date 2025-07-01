@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ejercicio suave para mantenerse activa | Segundo Trimestre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-bebe: #f291b3;
+            --celeste-bebe: #225ece;
+            --blanco-crema: #FFFBFB;
+            --rosa-hover: #FC68A0;
+            --gris-oscuro-texto: #385c6e;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f7;
+            color: #333;
+            margin: 0;
+            padding: 0; 
+        }
+        header {
+            background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+            color: white;
+            padding: 28px 18px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px #92b1eb;
+        }
+        header h1 {
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        header p { 
+            font-size: 1.04rem;
+            font-weight: 600;
+            opacity: 0.92;
+            margin: 0;
+            font-style: italic;
+            letter-spacing: .2px;
+        }
+        main {
+            max-width: 1050px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        }
+        .section-container { 
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 28px;
+            margin-bottom: 35px;
+        }
+        .section-content {
+            flex: 2 1 380px;
+            padding: 18px 24px 18px 24px;
+            border-left: 6px solid #c2185b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px #c2185b18;
+            max-width: 130ch;
+            padding-right: 12px;
+        }
+        .section-image {
+            flex: 1 1 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            margin: 0 auto;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .section-image img {
+            width: 85%; 
+            width: 260px;
+            height: 140px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-top: 0;
+            margin-bottom: 6px;
+            box-shadow: 0 4px 15px #b416557e; 
+            border: 2px solid #f8cadd;
+            transition: transform 0.22s ease;
+            background: #fff;
+        }
+        .section-image img:hover {
+            transform: scale(1.06);
+        }
+        .section-image .image-caption {
+            text-align: center;
+            font-size: 0.91em;
+            color: #7d3ba3;
+            margin-top: 7px;
+            font-style: italic;
+        } 
+        h2 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h4 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-bottom: 3px;
+            margin-top: 0;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 6px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-content ul, .section-content ol {
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .section-content li, .section-content p {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            max-width: 130ch;
+            padding-right: 12px;
+        }
+        .section-content ul li:last-child,
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+        .mini-section {
+            background: #fff;
+            border-left: 6px solid #225ece;
+            color: #385c6e;
+            font-size: 1.00em;
+            border-radius: 18px;
+            padding: 18px 24px;
+            margin-bottom: 35px;
+            margin-top: 8px;
+            box-shadow: 0 4px 18px #225ece18;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .mini-section h3 {
+            color: #225ece;
+            font-size: 1.3rem;
+            padding-bottom: 8px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-bottom: 3px solid #FF7F50;
+        }
+        .mini-section ul, .mini-section ol {
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .mini-section li, .mini-section p {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            max-width: 130ch;
+            padding-right: 12px;
+        }
+        .mini-section ul li:last-child,
+        .mini-section p:last-child {
+            margin-bottom: 0;
+        }
+        .highlight-info {
+            background: #fae7fd;
+            border-left: 6px solid #c2185b;
+            color: #385c6e;
+            font-size: 1.00em;
+            border-radius: 18px;
+            padding: 18px 24px;
+            margin-bottom: 18px;
+            margin-top: 35px;
+            box-shadow: 0 4px 18px #c2185b18;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .highlight-info-title {
+            color: #c2185b;
+            font-size: 1.2rem;
+            padding-bottom: 6px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 2px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .highlight-info-text {
+            font-size: 1.00em;
+            line-height: 1.4;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+        }
+        .highlight-info-text:last-child {
+            margin-bottom: 0;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 32px;
+        }
+        .cta-button {
+            padding: 12px 73px;
+            align-self: center;
+            width: auto;
+            min-width: 0;
+            background:#d5dffc;
+            color: #0c3277; 
+            border: none;
+            border-radius: 22px;
+            font-size: 1.06em;
+            font-weight: 720;
+            cursor: pointer;
+            transition: all 0.28s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.21);
+            transform: skewX(-20deg);
+            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            transform: translateY(-2.5px) scale(1.03);
+            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+        }
+        .cta-button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+        }
+        @media (max-width: 950px) {
+            main { max-width: 99vw; }
+            .section-container { flex-direction: column; gap: 0; }
+            .section-content, .section-image { border-radius: 15px; }
+            .section-content { padding: 14px 6vw 14px 6vw; }
+            .section-image { max-width: 99vw; min-width: 0; padding-bottom: 0; }
+            .section-image img { margin-top: 12px; }
+        }
+        @media (max-width: 700px) {
+            h2 { font-size: 1.08rem; }
+            .section-content, .mini-section { padding: 9px 4vw; }
+            .section-image img { width: 95%; min-width: 95px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Prácticas de respiración y ejercicios</h1>
+    <p>Tercer Trimestre</p>
+</header>
+
+<main>
+    <!-- Imagen a la derecha -->
+    <div class="section-container" style="flex-direction: row-reverse;">
+        <div class="section-image">
+            <img src="../img/img50.png">
+        </div>
+        <section class="section-content">
+            <h4>💨 ¿Por qué practicar la respiración en esta etapa?</h4>
+            <p>
+                Durante el tercer trimestre, el cuerpo se prepara para el parto y es común sentir mayor presión abdominal, dificultad para dormir o ansiedad. Practicar técnicas de respiración ayuda a <b>calmar el sistema nervioso, oxigenar mejor al bebé</b> y a <b>prepararse mentalmente para el momento del nacimiento</b>. Además, entrenar la respiración permite enfrentar mejor las contracciones y conservar energía durante el trabajo de parto.
+            </p>
+        </section>
+    </div>
+
+   <!-- Ejercicios recomendados -->
+<div class="mini-section">
+    <h3>🌱 Ejercicios de respiración que puedes practicar</h3>
+    <ul>
+        <li>
+            <b>Respiración profunda:</b> Siéntate en una silla con la espalda recta o recuéstate apoyando bien cabeza y piernas. Coloca una mano sobre tu abdomen. Inhala lentamente por la nariz contando hasta 4, sintiendo cómo se eleva el abdomen. Luego, exhala suavemente por la boca contando hasta 6, dejando que el abdomen baje. Esta respiración ayuda a relajar el cuerpo, mejora la oxigenación y calma la mente. Repite 5 a 10 veces, idealmente al despertar o antes de dormir.
+        </li>
+        <li>
+            <b>Respiración para el parto:</b> Esta técnica se practica para cuando empiecen las contracciones. Inhala durante 2 segundos por la nariz y exhala por la boca el doble de tiempo (4 segundos o más). Esto ayuda a conservar energía, mantener el ritmo y afrontar el dolor con mayor control. Puedes practicarla unos minutos cada día para familiarizarte antes del parto.
+        </li>
+    </ul>
+</div>
+
+<!-- Movimiento físico suave -->
+
+    <section class="mini-section">
+        <h2>🤰 Movimientos suaves que acompañan la respiración</h2>
+        <ul>
+            <li>
+                <b>Balanceo de pelvis:</b> Siéntate sobre una pelota de yoga o en una colchoneta con las piernas cruzadas. Comienza a mover lentamente la pelvis hacia adelante y hacia atrás, como si “acomodaras” la cadera. Coordina el movimiento con una respiración tranquila. Este ejercicio alivia la presión en la zona baja de la espalda, mejora la postura y favorece la colocación del bebé. Realízalo durante 5 a 10 minutos.
+            </li>
+            <li>
+                <b>Estiramientos laterales sentada:</b> Siéntate con las piernas cruzadas o en una silla. Eleva un brazo por encima de la cabeza y, al exhalar, inclina el torso hacia el lado contrario. Mantén unos segundos, respira normalmente y vuelve al centro. Alterna ambos lados. Este estiramiento mejora la movilidad del tórax, ayuda a respirar mejor y alivia molestias en las costillas y espalda media.
+            </li>
+        </ul>
+    </section>
+
+    <!-- Consejos y seguridad -->
+    <div class="section-container">
+    <div class="section-image">
+        <img src="../img/img52.png">
+    </div>
+    <section class="section-content">
+        <h2>⚠️ Consejos antes de comenzar</h2>
+        <ul>
+            <li>Practica siempre en un ambiente tranquilo, ventilado y sin interrupciones.</li>
+            <li>No hagas respiraciones forzadas ni te exijas: si sientes mareo, pausa y respira normalmente.</li>
+            <li>Consulta con tu obstetra si puedes realizar estos ejercicios según tu estado.</li>
+            <li>Si sientes contracciones frecuentes o dolor pélvico, detén la actividad y consulta.</li>
+        </ul>
+     </section>
+</div>
+
+    <!-- Nota final -->
+    <div class="highlight-info">
+        <div class="highlight-info-title">📝 Nota importante:</div>
+        <div class="highlight-info-text">
+            Las prácticas de respiración y ejercicios suaves no solo son útiles para el momento del parto, también mejoran el bienestar emocional y físico en las últimas semanas de embarazo. Haz lo que te haga sentir bien, sin compararte con otros embarazos.
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="../principal.html" class="cta-button">⬅️ Volver</a>
+    </div>
+</main>
+
+</body>
+</html>

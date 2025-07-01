@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>¿Qué sucede en las primeras semanas? | Primer Trimestre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-bebe: #f291b3;
+            --celeste-bebe: #225ece;
+            --blanco-crema: #FFFBFB;
+            --rosa-hover: #FC68A0;
+            --gris-oscuro-texto: #385c6e;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f7;
+            color: #333;
+            margin: 0;
+            padding: 0; 
+        }
+        header {
+            background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+            color: white;
+            padding: 28px 18px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px #92b1eb;
+        }
+        header h1 {
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        header p { 
+            font-size: 1.04rem;
+            font-weight: 600;
+            opacity: 0.92;
+            margin: 0;
+            font-style: italic;
+            letter-spacing: .2px;
+        }
+        main {
+            max-width: 1050px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        }
+        .intro {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            background: #fff;
+            border-radius: 18px;
+            padding: 18px 24px 18px 24px;
+            box-shadow: 0 4px 18px #c2185b18;
+            margin-bottom: 48px;
+            border-left: 6px solid #c2185b;
+       
+        }
+        .intro div {
+            flex: 1 1 65%;
+        }
+        .intro img {
+            flex: 0 0 18%;
+            max-width: none;
+            height: 135px;
+            width: 140px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #b416557e; 
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            background: #fff;
+            border: 2px solid #f8cadd;
+            margin-top: -30px;
+        }
+        .intro img:hover {
+            transform: scale(1.05);
+        }
+        .intro p {
+            font-size: 1.00em;
+            color:  #385c6e;
+            text-align: justify;
+
+            
+        }
+
+        /* ===== CONTENEDOR BLANCO BORDE ROSA (idéntico a .section-content) ===== */
+        section.section {
+            background: #fff;
+            border-radius: 18px;
+            padding: 18px 24px 18px 24px;
+            box-shadow: 0 4px 18px #c2185b18;
+            margin-bottom: 35px;
+            border-left: 6px solid #c2185b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        section.section ul,
+        section.section ol {
+            padding-left: 22px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        section.section li,
+        section.section p {
+            font-size: 1.00em;
+            line-height: 1.6;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+            max-width: 110ch;
+        }
+        section.section ul li:last-child,
+        section.section p:last-child {
+            margin-bottom: 0;
+        }
+        section.section h2 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-top: 1;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        section.section h4 {
+            color: #c2185b;
+            font-size: 1.3rem;
+            margin-bottom: 3px;
+            margin-top: 0;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 6px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        /* ===== FIN CONTENEDOR BLANCO BORDE ROSA ===== */
+
+        .highlight {
+            background-color: #e7e9fd;
+            color:#2b3850; 
+            font-weight: 600;
+            border-left: 6px solid #225ece;
+            padding: 18px 20px 18px 22px;
+            margin-top: 20px;
+            border-radius: 12px;
+            font-size: 1.00rem;
+        }
+        .highlight-small {
+            background-color: #e7e9fd;
+            color:#2b3850; 
+            font-weight: 600;
+            border-left: 6px solid #225ece;
+            padding: 18px 20px 18px 22px;
+            margin-top: 20px;
+            border-radius: 12px;
+            font-size: 1.00rem;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta-button {
+            padding: 12px 73px;
+            align-self: center;
+            width: auto;
+            min-width: 0;
+            background:#d5dffc;
+            color: #0c3277; 
+            border: none;
+            border-radius: 22px;
+            font-size: 1.06em;
+            font-weight: 720;
+            cursor: pointer;
+            transition: all 0.28s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.21);
+            transform: skewX(-20deg);
+            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            transform: translateY(-2.5px) scale(1.03);
+            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+        }
+        .cta-button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+        }
+        @keyframes fadeInLinks {
+            from { opacity: 0; transform: translateY(25px);}
+            to   { opacity: 1; transform: translateY(0);}
+        }
+        .content-image {
+            display: block;
+            max-width: 70%;
+            height: auto;
+            margin: 25px auto;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px #b416557e; 
+            object-fit: cover;
+            margin-top: 8px;
+            transition: transform 0.3s ease;
+            border: 2px solid #f8cadd;
+        }
+        .content-image:hover {
+             transform: scale(1.05);
+        }
+        @media (max-width: 900px) {
+            main { max-width: 99vw; }
+            .intro { flex-direction: column; padding: 18px 5vw; }
+            .intro img { width: 62%; height: auto; margin: 0 auto 16px auto; }
+            section.section { padding: 14px 6vw 14px 6vw; }
+            section.section h2 {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            .content-image {
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Qué ocurre y que hacer</h1>
+    <p>Primer Trimestre – Embarazo</p>
+</header>
+<main>
+
+
+<section class="section">
+  <h2>🧠 1. Reacciones emocionales</h2>
+  <ul>
+    <li>Es normal sentir emociones mezcladas como alegría, miedo, confusión o irritabilidad en las primeras semanas.</li>
+    <li>Muchos embarazos no son planificados, lo que puede generar preocupación o hacerte sentir insegura sobre el futuro.</li>
+    <li>No ignores lo que sientes: reconocer tus emociones es parte del proceso.</li>
+    <li>Habla con alguien de confianza o busca apoyo psicológico si sientes que lo necesitas.</li>
+  </ul>
+</section>
+
+
+    <section class="section">
+        <h2>🔬 2. Confirmación y primeras acciones</h2>
+        <ul>
+            <li>
+                Si sospechas de un embarazo porque tu menstruación no llegó, hazte una prueba de embarazo casera (test de orina). Puede dar resultados desde unos días antes del retraso, pero es más confiable con al menos 1 semana de retraso.
+            </li>
+            <li>
+                Para mayor seguridad, hazte un análisis de sangre en un centro de salud.
+            </li>
+            <li>
+                Si confirmas el embarazo, agenda tu primera cita médica o ginecológica para empezar tu control prenatal.
+            </li>
+        </ul>
+        <div class="highlight">⚠️ Evita tomar medicamentos, suplementos o remedios caseros sin indicación profesional desde este momento.</div>
+    </section>
+
+    <section class="section">
+        <h2>🤰 3. Primeros cambios en tu cuerpo</h2>
+        <img src="../img/img02.png" class="content-image">
+        <ul>
+            <li>
+                Tus senos pueden sentirse más sensibles, hinchados o doloridos.
+            </li>
+            <li>
+                El útero empieza a crecer, lo que puede hacer que tengas más ganas de orinar, aunque aún no se note por fuera.
+            </li>
+            <li>
+                Es común sentir mucho cansancio o sueño, incluso sin haber hecho mucho esfuerzo.
+            </li>
+            <li>
+                Las náuseas o vómitos pueden aparecer, sobre todo en las mañanas, pero también en otros momentos del día.
+            </li>
+            <li>
+                Puedes notar que ciertos olores te molestan más o que tu apetito cambia sin razón.
+            </li>
+            <li>
+                Es posible que tengas cambios de humor o estés más sensible de lo normal. Es parte del proceso.
+            </li>
+            <li>
+                La digestión puede volverse más lenta, causando estreñimiento, gases o acidez.
+            </li>
+            <li>
+                Puede que tu ropa te quede más ajustada en el pecho o la cintura, aunque aún no tengas barriga.
+            </li>
+        </ul>
+        <div class="highlight">
+            🔍 Tu cuerpo ya está trabajando para cuidar al bebé desde las primeras semanas.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>🧭 4. Lo que debes saber y hacer desde el inicio</h2>
+        <img src="../img/img03.png" class="content-image">
+        <ul>
+            <li>
+                Muchos abortos espontáneos ocurren en las primeras semanas y, en la mayoría de casos, no son culpa de nadie. El cuerpo a veces interrumpe el embarazo de forma natural cuando detecta que el desarrollo no es el adecuado.
+            </li>
+            <li>
+                Pide tu primera cita médica lo antes posible. El control prenatal debe empezar en el primer trimestre.
+            </li>
+            <li>
+                Comienza a tomar ácido fólico si aún no lo has hecho. Ayuda a prevenir malformaciones en el desarrollo del bebé.
+            </li>
+            <li>
+                No tomes medicamentos ni infusiones sin consultar con un profesional de salud.
+            </li>
+            <li>
+                Duerme bien, aliméntate de forma equilibrada y evita el estrés y el sobreesfuerzo.
+            </li>
+            <li>
+                Mantente alejada de sustancias químicas peligrosas, productos tóxicos y ambientes con mucho humo o contaminación.
+            </li>
+        </ul>
+        <div class="highlight">
+            📝 Estar informada desde el principio te ayuda a tomar decisiones seguras para ti y tu bebé.
+        </div>
+    </section>
+
+    <section class="button-container">
+        <a href="../principal.html" class="cta-button">⬅️ Volver</a>
+    </section>
+</main>
+</body> 
+</html>
